@@ -5,7 +5,7 @@
   base = "js-portfolio/"
 
   
-  publish = "dist/"
+  publish = "dist"
 
   # Default build command.
   command = "npm run build"
