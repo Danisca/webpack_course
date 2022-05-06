@@ -20,7 +20,7 @@ module.exports = {
          assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     mode: 'development',    
-    watch: true,
+    // watch: true,
     //define las extenciones de los archivos compilados
     resolve:{
         extensions: [ '.js'],
@@ -86,5 +86,12 @@ module.exports = {
         }),
         new dotendWebpack(),
     ],
-    
+    devServer:{
+        static:{
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 3000,
+        historyApiFallback: true
+    } 
 }
